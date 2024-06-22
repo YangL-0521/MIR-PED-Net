@@ -1,1 +1,1 @@
-此文件夹下，存放的为预测阶段时需要验证的图片
+In this folder, the images that need to be verified during the prediction phase are stored

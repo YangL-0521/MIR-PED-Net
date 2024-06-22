@@ -13,6 +13,7 @@ Before training, put the image files in JPEGImages under VOC2007 folder under VO
 2. Acquisition Method of Infrared Pedestrian Dataset
    
 FLIR dataset download address is: https://www.flir.com/oem/adas/adas-dataset-form/. 
+
 KAIST dataset download address is: https://github.com/SoonminHwang/rgbt-ped-detection.
 
 3. Processing of the dataset

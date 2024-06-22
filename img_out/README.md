@@ -1,1 +1,1 @@
-保存验证结果的文件夹
+Folder to save validation results

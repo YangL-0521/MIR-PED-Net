@@ -1,3 +1,5 @@
+## Pytorch implementation for "MEANet: Multi-scale Hybrid and Enhanced Receptive Field Attention Network for Infrared Pedestrian Detection".
+
 ## Required environment
 pytorch >= 1.7.1
 

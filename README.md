@@ -1,7 +1,32 @@
 ## Required environment
 pytorch >= 1.7.1
+
 The rest of the required libraries are in requirements.txt
      
+## Important Document Description
+model_datd ----------- Folder to store the number of classes for the dataset
+
+VOCdevkit ------------ The data set is stored in a folder. You can read the readme file in the folder to set the data set
+
+nets ----------------- Primary network storage
+
+voc_annotation.py ---- Split the dataset. Save the data set into the VOCdevkit folder according to the instructions. Run this file to divide the data set into training set, validation set, and test set
+
+summary.py ----------- View files for the number of network parameters and floating-point operations
+
+train.py ------------- Training file
+
+yolo.py -------------- After training, the yolo.py file is used to set parameters such as weights, data sets, and input sizes to test the results, whether it's get_map or predict.
+
+get_map.py ----------- File of detection results on the test set
+
+predict.py ----------- File to visualize the results on the test set
+
+
+
+## Acquisition Method of Infrared Pedestrian Dataset
+FLIR dataset download address is: https://www.flir.com/oem/adas/adas-dataset-form/. 
+KAIST dataset download address is: https://github.com/SoonminHwang/rgbt-ped-detection.
 
 ## Training steps
 1. Dataset preparation
@@ -94,9 +119,6 @@ img/street.jpg
 4. Change model_path and classes_path in yolo.py. **model_path points to the trained weights file, in the logs folder. classes_path points to the txt corresponding to the detected class. **
 Run get_map.py to get the evaluation results, which are stored in the map_out folder.
 
-## Acquisition Method of Infrared Pedestrian Dataset
-FLIR dataset download address is: https://www.flir.com/oem/adas/adas-dataset-form/. 
-KAIST dataset download address is: https://github.com/SoonminHwang/rgbt-ped-detection.
 
 NOTE: 
 If a weight file is required, the author can be contacted

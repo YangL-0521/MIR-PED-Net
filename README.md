@@ -1,6 +1,5 @@
 ## Required environment
 pytorch >= 1.7.1
-
 The rest of the required libraries are in requirements.txt
      
 
@@ -10,13 +9,7 @@ The rest of the required libraries are in requirements.txt
 Put the label file in Annotation under VOC2007 folder under VOCdevkit folder before training. (Tag file format is xml format)
 Before training, put the image files in JPEGImages under VOC2007 folder under VOCdevkit folder.
 
-2. Acquisition Method of Infrared Pedestrian Dataset
-   
-FLIR dataset download address is: https://www.flir.com/oem/adas/adas-dataset-form/. 
-
-KAIST dataset download address is: https://github.com/SoonminHwang/rgbt-ped-detection.
-
-3. Processing of the dataset
+2. Processing of the dataset
  After placing the dataset, we need to use voc_annotation.py to get 2007_train.txt and 2007_val.txt for training.
 Change the arguments in voc_annotation.py. The first training can simply modify the classes_path, which is used to point to the txt corresponding to the detected class.
 When training your own dataset, you can create your own cls_classes.txt with the classes you want to distinguish between.
@@ -30,20 +23,19 @@ dog
 Change the classes_path in voc_annotation.py to match cls_classes.txt, and run voc_annotation.py.
 
 
-4. Start train  
+3. Start train  
 ** There are many parameters for training, all in train.py, but the most important part is again classes_path in train.py. **
 **classes_path is used to point to the txt corresponding to the detected class, which is the same txt as in voc_annotation.py! The dataset on which you train yourself will have to change! **
 After changing classes_path, we can run train.py to start training, and after training for a number of epochs, the weights will be generated in the logs folder. 
 
-5. Training result prediction  
+4. Training result prediction  
 We will use two files called yolo.py and predict.py to predict the training results. Change model_path and classes_path in yolo.py.
 **model_path points to the trained weights file, in the logs folder.
 classes_path points to the txt corresponding to the detected class. **
 Once you've made these changes, you can run predict.py to test for them. After running, input the image path to detect.  
 
 ## Prediction steps
-1. Follow the training steps.
-   
+1. Follow the training steps。  
 2.In yolo.py, modify model_path and classes_path to match our trained files in the following sections: **model_path corresponds to the weights file in the logs folder, and classes_path is the class corresponding to model_path **.
  
 ```python
@@ -102,6 +94,9 @@ img/street.jpg
 4. Change model_path and classes_path in yolo.py. **model_path points to the trained weights file, in the logs folder. classes_path points to the txt corresponding to the detected class. **
 Run get_map.py to get the evaluation results, which are stored in the map_out folder.
 
+## Acquisition Method of Infrared Pedestrian Dataset
+FLIR dataset download address is: https://www.flir.com/oem/adas/adas-dataset-form/. 
+KAIST dataset download address is: https://github.com/SoonminHwang/rgbt-ped-detection.
 
-## NOTE:
+NOTE: 
 If a weight file is required, the author can be contacted

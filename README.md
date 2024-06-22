@@ -11,6 +11,7 @@ Put the label file in Annotation under VOC2007 folder under VOCdevkit folder bef
 Before training, put the image files in JPEGImages under VOC2007 folder under VOCdevkit folder.
 
 2. Acquisition Method of Infrared Pedestrian Dataset
+   
 FLIR dataset download address is: https://www.flir.com/oem/adas/adas-dataset-form/. 
 KAIST dataset download address is: https://github.com/SoonminHwang/rgbt-ped-detection.
 

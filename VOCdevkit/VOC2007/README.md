@@ -3,4 +3,4 @@ Put the label file in Annotation under VOC2007 folder under VOCdevkit folder bef
 
 Before training, put the image files in JPEGImages under VOC2007 folder under VOCdevkit folder.
 
-ImageSets
+The ImageSets folder is the name of the train, val, and test files after running voc_annotation.py
